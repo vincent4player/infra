@@ -8,7 +8,7 @@
 6. [Installation d'Apache](#installation-dapache)
 7. [Installation de la database (mariadb)](#installation-de-la-database-mariadb)
 8. [Configuration de NextCloud](#configuration-de-nextcloud)
-9. [Mise en lien VPN et NextCloud](#mise-en-lien-vpn-et-nextcloud)
+9. [Mise en relation VPN et NextCloud](#mise-en-relation-vpn-et-nextcloud)
 10. [Difficultés rencontrées](#difficultés-rencontrées)
 <br>
 <br>
@@ -279,7 +279,7 @@ sudo apt install php libapache2-mod-php php-mysql
 
 Récupérer NextCloud
 
-créez le dossier /var/www/vpn_nextcloud/
+Créez le dossier /var/www/vpn_nextcloud/
 Ce sera notre racine web l'endroit où le site est stocké.
 
 
@@ -368,8 +368,8 @@ On va vous demander un utilisateur et un mot de passe pour créer un compte admi
 Ne saisissez rien pour le moment
 Cliquez sur "Storage & Database" juste en dessous
 
-choisissez "MySQL/MariaDB"
-saisissez les informations pour que NextCloud puisse se connecter avec votre base
+Choisissez "MySQL/MariaDB"
+Saisissez les informations pour que NextCloud puisse se connecter avec votre base
 
 
 Saisissez l'identifiant et le mot de passe admin que vous voulez, et validez l'installation
@@ -378,11 +378,11 @@ Saisissez l'identifiant et le mot de passe admin que vous voulez, et validez l'i
 <br>
 <br>
 
-# Mise en lien VPN et NextCloud
+# Mise en relation VPN et NextCloud
 
 Pour cela, il faut :
 
-aller dans les fichiers de configuration d'Apache et changer l'adresse IP du virtual host pour la remplacer par celle de notre VPN.
+Aller dans les fichiers de configuration d'Apache et changer l'adresse IP du virtual host pour la remplacer par celle de notre VPN.
 ```
 cd /etc/apache2/sites-enabled/
 sudo nano 000-default.conf
