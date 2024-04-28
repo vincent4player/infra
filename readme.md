@@ -88,7 +88,7 @@ WireGuard est un protocole VPN (Virtual Private Network) open source conçu pour
 5. **Flexibilité :** WireGuard est conçu pour être polyvalent et facile à intégrer dans divers environnements réseau. Il peut être utilisé sur une variété de plates-formes, y compris Linux, Windows, macOS, Android et iOS.
 
 En résumé, WireGuard est un protocole VPN moderne qui combine simplicité, performances élevées et sécurité robuste, ce qui en fait un choix attrayant pour de nombreux cas d'utilisation, des communications personnelles aux déploiements d'entreprise.
-
+![alt text](image-2.png)
 
 <br>
 <br>
@@ -193,6 +193,9 @@ Ouvrir les ports si necessaire avec :
 sudo ufw allow 'Apache'
 
 ```
+
+En allant sur internet après l’installation d’apache on doit tombé sur la page par défault. C’est ensuite en configurant nextcloud que nous pourrons y avoir accès.
+![alt text](image-3.png)
 <br>
 <br>
 <br>
@@ -391,6 +394,8 @@ Saisissez les informations pour que NextCloud puisse se connecter avec votre bas
 
 
 Saisissez l'identifiant et le mot de passe admin que vous voulez, et validez l'installation
+![alt text](image-4.png)
+![alt text](image-5.png)
 <br>
 <br>
 <br>
