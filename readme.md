@@ -97,6 +97,22 @@ Nextcloud est une plateforme de partage et de stockage de fichiers open-source, 
 
 # Prérequis d'installation
 
+
+Les prérequis d'installation pour notre projet comprennent plusieurs éléments nécessaires au déploiement d'un environnement sécurisé sur Microsoft Azure, comprenant un serveur VPN, un serveur Apache et une instance Nextcloud. Voici les prérequis principaux :
+
+1. **Accès à Microsoft Azure :** Nous avons besoin d'un compte Microsoft Azure pour créer et gérer les ressources cloud nécessaires, telles que les machines virtuelles, les réseaux virtuels, etc.
+
+2. **Machine virtuelle Azure :** Nous devrons créer une machine virtuelle sur Microsoft Azure pour héberger nos services, tels que le serveur VPN, Apache et MariaDB. 
+
+3. **Système d'exploitation :** Nous devons choisir un système d'exploitation pris en charge pour nos machines virtuelles,ici ce sera Ubuntu.
+
+4. **Installation des logiciels :** Nous devrons installer et configurer les logiciels nécessaires, tels que le serveur VPN (WireGuard), le serveur web Apache, PHP, et la base de données MariaDB sur nos machines virtuelles.
+
+5. **Configuration des règles de pare-feu :** Configurez les règles de pare-feu sur Azure pour limiter l'accès à vos services uniquement aux clients autorisés, en bloquant l'accès depuis Internet non sécurisé.
+
+En respectant ces prérequis et en suivant les étapes d'installation et de configuration appropriées, Nous pourrons déployer avec succès notre environnement sécurisé sur Microsoft Azure.
+
+
 <br>
 <br>
 <br>
