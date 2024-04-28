@@ -1,3 +1,88 @@
+
+# Table des matières
+
+1. [Objectifs](#objectifs)
+2. [Présentation d'un VPN](#présentation-dun-vpn)
+3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-et-apache)
+4. [Prérequis d'installation](#prérequis-dinstallation)
+5. [Installation du serveur VPN](#installation-du-serveur-vpn)
+6. [Installation d'Apache](#installation-dapache)
+7. [Installation de la database (mariadb)](#installation-database)
+8. [Configuration de NextCloud](#configuration-de-nextcloud)
+9. [Mise en lien VPN et NextCloud](#mise-en-lien-vpn-et-nextcloud)
+10. [Difficultés rencontrées](#difficultés-rencontrées)
+
+
+
+
+
+
+
+
+
+3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-et-apache)
+# Présentation des composants de NextCloud
+
+## 1. Présentation du setup
+
+NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
+
+### Sur le serveur azure :
+- Installation d'un serveur Web : Apache
+  - Le serveur web traite les requêtes HTTP reçues des clients
+  - Il fait passer le contenu des requêtes à NextCloud
+  - NextCloud décide quels fichiers HTML, CSS et JS il faut donner au client
+  - Le serveur Web effectue une réponse HTTP qui contient ces fichiers HTML, CSS et JS
+- Installation de PHP pour que NextCloud puisse s'exécuter
+
+### Sur le serveur azure:
+- Installation d'un service de base de données SQL : MariaDB
+  - NextCloud pourra s'y connecter
+  - Nous aurons créé une base de données exprès pour lui
+
+### Mise en place de NextCloud:
+- NextCloud est une application PHP
+
+## 2. Présentation des étapes
+
+Dans l'ordre, voici les étapes que nous allons suivre :
+
+### Sur le serveur azure :
+1. Installer le serveur web
+   - Installer le service
+   - Lancer le service
+   - Explorer le service pour comprendre sa configuration, son port, etc.
+   
+2. Installer PHP
+   - Une version spécifique est nécessaire
+   
+3. Installer NextCloud
+   - Récupérer une archive sur internet contenant le code
+   - Extraire au bon endroit, gérer les permissions
+   
+4. Configurer le serveur Web
+   - Indiquer la mise en place d'un site Web (NextCloud) dans un dossier spécifique
+   - Redémarrer le service
+
+### Sur le serveur azure :
+1. Installer le service de base de données (MariaDB)
+   - Installer le service
+   - Lancer le service
+   - Explorer le service
+
+2. Préparer le service de base de données pour NextCloud
+   - Se connecter au service en local
+   - Créer un utilisateur et une base de données dédiés à NextCloud
+
+3. Accéder à l'interface de NextCloud depuis votre navigateur
+
+
+
+
+
+
+
+
 Partie 1 : Installation d'Apache sur le serveur azure.
 
 
