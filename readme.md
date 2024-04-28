@@ -1,7 +1,7 @@
 # Table des matières
 
 1. [Objectifs du projet](#objectifs-du-projet)
-2. [Présentation d'un serveur VPN](#présentation-dun-serveur-vpn)
+2. [Présentation d'un serveur VPN et de Wireguard](#présentation-dun-serveur-vpn-et-de-Wireguard)
 3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-apache-et-la-database)
 4. [Prérequis d'installation](#prérequis-dinstallation)
 5. [Installation du serveur VPN](#installation-du-serveur-vpn)
@@ -37,7 +37,7 @@ En mettant en place ces objectifs, nous créons un environnement sécurisé où 
 <br>
 <br>
 
-# Présentation d'un serveur VPN
+# Présentation d'un serveur VPN et de Wireguard
 
 # Qu'est-ce qu'un serveur VPN ?
 
@@ -54,6 +54,23 @@ Les entreprises utilisent souvent des VPN pour permettre à leurs employés d'ac
 Lorsque vous vous connectez à un VPN, votre adresse IP réelle est masquée et remplacée par l'adresse IP du serveur VPN. Cela peut aider à protéger votre vie privée en ligne en rendant plus difficile pour les sites web et les services en ligne de tracer vos activités. Par exemple, si vous utilisez un VPN avec un serveur situé en France, les sites que vous visitez penseront que vous êtes en France, même si vous êtes physiquement ailleurs.
 
 En résumé, un serveur VPN offre un moyen sécurisé et privé de se connecter à internet et permet à des clients distants d'accéder au même réseau LAN.
+
+# Qu'est-ce WireGuard ?
+
+WireGuard est un protocole VPN (Virtual Private Network) open source conçu pour créer des connexions sécurisées et privées sur Internet. Il vise à fournir une alternative plus rapide, plus simple et plus sécurisée aux protocoles VPN traditionnels tels que OpenVPN et IPsec. Voici quelques points clés sur WireGuard :
+
+1. **Simplicité :** WireGuard se distingue par sa simplicité de conception et d'utilisation. Son code source est relativement compact, ce qui facilite l'audit de sécurité et la maintenance.
+
+2. **Performances :** Grâce à sa conception légère et efficace, WireGuard est réputé pour offrir des performances supérieures à celles des protocoles VPN plus anciens. Il minimise la surcharge de traitement, ce qui se traduit par des vitesses de connexion plus rapides et une latence réduite.
+
+3. **Sécurité :** WireGuard met l'accent sur la sécurité en utilisant des algorithmes de chiffrement modernes et éprouvés. Il utilise des courbes elliptiques, comme Curve25519, pour l'échange de clés, ainsi que le chiffrement ChaCha20 pour la confidentialité des données.
+
+4. **Fiabilité :** Bien que WireGuard soit relativement nouveau par rapport à d'autres protocoles VPN, il a été intégré au noyau Linux à partir de la version 5.6, ce qui témoigne de sa maturité et de sa stabilité croissantes.
+
+5. **Flexibilité :** WireGuard est conçu pour être polyvalent et facile à intégrer dans divers environnements réseau. Il peut être utilisé sur une variété de plates-formes, y compris Linux, Windows, macOS, Android et iOS.
+
+En résumé, WireGuard est un protocole VPN moderne qui combine simplicité, performances élevées et sécurité robuste, ce qui en fait un choix attrayant pour de nombreux cas d'utilisation, des communications personnelles aux déploiements d'entreprise.
+
 
 <br>
 <br>
@@ -80,7 +97,17 @@ Nextcloud est une plateforme de partage et de stockage de fichiers open-source, 
 
 # Prérequis d'installation
 
+<br>
+<br>
+<br>
+<br>
+
 # Installation du serveur VPN
+
+<br>
+<br>
+<br>
+<br>
 
 # Installation d'Apache
 
@@ -356,6 +383,10 @@ Pour vérifier si ce que nous avons fait fonctionne, il suffit de taper l'adress
 ```
 10.6.1.1
 ```
+<br>
+<br>
+<br>
+<br>
 
 # Difficultés rencontrées
 
