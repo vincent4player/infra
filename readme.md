@@ -124,14 +124,14 @@ sudo apt update
 sudo apt install apache2
 ```
 
-le fichier de conf principal est /etc/httpd/conf/httpd.conf
+le fichier de conf principal est /etc/apache2/apache2.conf
 ```
 sudo nano /etc/apache2/apache2.conf
 ```
 
 🌞 Démarrer le service Apache
 
-le service s'appelle httpd.
+le service s'appelle apache2.
 
 Démarrez-le avec:
 ```
@@ -209,6 +209,7 @@ sudo ufw allow 3306/tcp
 <br>
 <br>
 # Configuration de NextCloud
+
 Partie 3 : Configuration et mise en place de NextCloud
 
 
