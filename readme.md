@@ -15,6 +15,7 @@
 <br>
 <br>
 <br>
+# Objectifs
 
 
 Le principal objectif de ce projet est de déployer un environnement sécurisé sur Microsoft Azure, comprenant un serveur VPN, un serveur Apache et une instance Nextcloud. Les objectifs spécifiques sont les suivants :
@@ -35,7 +36,7 @@ En mettant en place ces objectifs, nous créons un environnement sécurisé où 
 <br>
 <br>
 <br>
-[Présentation d'un VPN](#présentation-dun-vpn)
+# Présentation d'un VPN
 # Qu'est-ce qu'un serveur VPN ?
 
 Un serveur VPN (Virtual Private Network) est essentiellement un serveur dédié qui permet de créer un tunnel sécurisé et chiffré entre votre appareil et internet. Ce tunnel sécurisé assure que toutes les données échangées entre votre appareil et le serveur VPN sont cryptées, ce qui offre une protection de votre vie privée et de vos informations sensibles.
@@ -55,7 +56,7 @@ En résumé, un serveur VPN offre un moyen sécurisé et privé de se connecter 
 <br>
 <br>
 <br>
-[Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-et-apache)
+# Présentation de NextCloud, Apache et la database
 # 1. Présentation du setup
 
 NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
@@ -108,15 +109,14 @@ Dans l'ordre, voici les étapes que nous allons suivre :
   - Créer un utilisateur et une base de données dédiés à NextCloud
 
 3. Accéder à l'interface de NextCloud depuis votre navigateur
-[Prérequis d'installation](#prérequis-dinstallation)
 <br>
 <br>
 <br>
 <br>
-[Installation d'Apache](#installation-dapache)
+# Installation d'Apache
 Partie 1 : Installation d'Apache sur le serveur azure.
 
-# Objectifs
+
 🌞 Installer le serveur Apache
 
 ```
@@ -167,7 +167,7 @@ sudo ufw allow 'Apache'
 <br>
 <br>
 <br>
-[Installation de la database (mariadb)](#installation-database)
+# Installation de la database (mariadb)
 PARTIE 2: Installation de la database pour nextcloud.
 
 
@@ -208,7 +208,7 @@ sudo ufw allow 3306/tcp
 <br>
 <br>
 <br>
-[Configuration de NextCloud](#configuration-de-nextcloud)
+# Configuration de NextCloud
 Partie 3 : Configuration et mise en place de NextCloud
 
 
@@ -244,7 +244,6 @@ FLUSH PRIVILEGES;
 
 
 🌞 Exploration de la base de données
-
 
 Utilisez la commande mysql pour vous connecter à une base de données, ici ce sera :
 ```
@@ -370,9 +369,9 @@ Saisissez l'identifiant et le mot de passe admin que vous voulez, et validez l'i
 <br>
 <br>
 <br>
-[Mise en lien VPN et NextCloud](#mise-en-lien-vpn-et-nextcloud)
-[Difficultés rencontrées](#difficultés-rencontrées)
-# Difficultés Rencontrées
+# Mise en lien VPN et NextCloud
+# Difficultés rencontrées
+
 
 Pendant la mise en œuvre du projet, plusieurs difficultés ont été rencontrées, notamment :
 
