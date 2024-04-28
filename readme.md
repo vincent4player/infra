@@ -266,7 +266,7 @@ sudo chown -R www-data:www-data /var/www/vpn_nextcloud/
 
 ```
 
-🌞 Adapter la configuration d'Apache
+Adapter la configuration d'Apache
 
 Modifier le fichier nextcloud.conf avec cette commande et mettez y le doc ci-dessous :
 ```
@@ -307,7 +307,7 @@ Modifiez votre fichier hosts de votre PC pour pouvoir joindre l'IP de la VM en u
 Avec un navigateur, visitez NextCloud à l'URL http://vpn_nextcloud
 
 
-🌞 Installez les deux modules PHP.
+Installez les deux modules PHP.
 
 Installez les modules PHP : 
 ```
@@ -336,6 +336,27 @@ Saisissez l'identifiant et le mot de passe admin que vous voulez, et validez l'i
 <br>
 
 # Mise en lien VPN et NextCloud
+
+Pour cela, il faut :
+
+aller dans les fichiers de configuration d'Apache et changer l'adresse IP du virtual host pour la remplacer par celle de notre VPN.
+```
+cd /etc/apache2/sites-enabled/
+sudo nano 000-default.conf
+```
+
+Changer <VirtualHost *:80> par <VirtualHost 10.6.1.1:80>
+
+Il faut ensuite redémarrer le service. 
+```
+sudo systemctl restart apache2
+```
+
+Pour vérifier si ce que nous avons fait fonctionne, il suffit de taper l'adresse IP dans la barre de recherche du navigateur.
+```
+10.6.1.1
+```
+
 # Difficultés rencontrées
 
 
