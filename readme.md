@@ -1,15 +1,16 @@
-Partie 1 : Installation d'Apache sur la machine Web.
+Partie 1 : Installation d'Apache sur le serveur azure.
 
 
 🌞 Installer le serveur Apache
 
 ```
-sudo dnf install httpd
+sudo apt update
+sudo apt install apache2
 ```
 
 le fichier de conf principal est /etc/httpd/conf/httpd.conf
 ```
-sudo nano /etc/httpd/conf/httpd.conf
+sudo nano /etc/apache2/apache2.conf
 ```
 
 🌞 Démarrer le service Apache
@@ -18,40 +19,44 @@ le service s'appelle httpd.
 
 Démarrez-le avec:
 ```
-sudo systemctl start httpd.service
+sudo systemctl start apache2
+
 ```
 
 Faites en sorte qu'Apache démarre automatiquement au démarrage de la machine avec :
 ```
-sudo systemctl enable httpd.service
+sudo systemctl enable apache2
+
 ```
 
 Vérifier qu'il a bien demarré avec :
 ```
-sudo systemctl status httpd
+sudo systemctl status apache2
+
 ```
 
 Vérifier qu'il se lance bien au demarage avec : 
 ```
-sudo systemctl is-enabled httpd
+sudo systemctl is-enabled apache2
+
 ```
 
 
 Ouvrir les ports si necessaire avec :
 ```
-sudo firewall-cmd --permanent --add-port=80/tcp    (le port 80 est le port sur lequel apache écoute)
-sudo firewall-cmd --reload
+sudo ufw allow 'Apache'
+
 ```
 
 
-PARTIE 2: Sur la DataBase.
+PARTIE 2: Installation de la database pour nextcloud.
 
 
-🌞 Install de MariaDB sur db.tp6.linux
+🌞 Install de MariaDB .
 
 Installer MariaDB
 ```
-sudo dnf install mariadb-server
+sudo apt install mariadb-server
 ```
 
 Démarer le service MariaDB :
@@ -77,16 +82,13 @@ https://docs.rockylinux.org/guides/database/database_mariadb-server/
 Le port utilisé par MariabDB est le 3306 :
 Ouvrir les ports si necessaire.
 ```
-sudo firewall-cmd --permanent --add-port=3306/tcp    (le port 3306est le port sur lequel MariabDB écoute)
-sudo firewall-cmd --reload
+sudo ufw allow 3306/tcp
+
 ```
 
 
 Partie 3 : Configuration et mise en place de NextCloud
 
-
-
-Partie 3 : Configuration et mise en place de NextCloud
 
 🌞 Préparation de la base pour NextCloud
 
@@ -100,7 +102,7 @@ sudo mysql -u root -p
 Exécutez les commandes SQL suivantes :
 ```
 -- Création d'un utilisateur dans la base, avec un mot de passe
-CREATE USER 'nextcloud'@'10.6.1.11' IDENTIFIED BY 'pewpewpew';
+CREATE USER 'nextcloud'@'localhost' IDENTIFIED BY 'pewpewpew';
 ```
 
 ```
@@ -110,7 +112,7 @@ CREATE DATABASE IF NOT EXISTS nextcloud CHARACTER SET utf8mb4 COLLATE utf8mb4_ge
 
 ```
 -- On donne tous les droits à l'utilisateur nextcloud sur toutes les tables de la base qu'on vient de créer
-GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'10.6.1.11';
+GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost';
 ```
 
 ```
@@ -127,7 +129,7 @@ Depuis la machine web.tp6.linux vers l'IP de db.tp6.linux
 
 Utilisez la commande mysql pour vous connecter à une base de données, ici ce sera :
 ```
-mysql -u nextcloud -h 10.6.1.12 -p
+mysql -u nextcloud -h localhost -p
 ```
 Si mysql n'est pas installé, utilisé la commande "sudo dnf install mysql" pour l'installer.
 
@@ -145,54 +147,58 @@ SHOW TABLES;
 la version de PHP nécessaire est la 8.0, elle est fournie par Rocky !
 installation du paquet php :
 ```
-sudo dnf install php
+sudo apt install php libapache2-mod-php php-mysql
+
 ```
 
 🌞 Récupérer NextCloud
 
-créez le dossier /var/www/tp6_nextcloud/
+créez le dossier /var/www/vpn_nextcloud/
 Ce sera notre racine web l'endroit où le site est stocké.
 
 
 récupérer le fichier suivant avec une commande wget :
 ```
-sudo wget https://download.nextcloud.com/server/releases/latest.zip -P /var/www/tp6_nextcloud/
+sudo wget https://download.nextcloud.com/server/releases/latest.zip -P /var/www/vpn_nextcloud/
+
 ```
-Installez wget si necessaire avec "sudo dnf install wget".
+Installez wget si necessaire avec "sudo apt install wget".
 
 
-Extrayez tout son contenu dans le dossier /var/www/tp6_nextcloud/ :
+Extrayez tout son contenu dans le dossier /var/www/vpn_nextcloud/ :
 ```
-sudo unzip /var/www/tp6_nextcloud/latest.zip -d /var/www/tp6_nextcloud/
+sudo unzip /var/www/vpn_nextcloud/latest.zip -d /var/www/vpn_nextcloud/
 ```
-Installez unzip si necessaire avec "sudo dnf install unzip".
+Installez unzip si necessaire avec "sudo apt install unzip".
 
 
-Déplacer les fichier unzipe dans "/var/www/tp6_nextcloud/" avec : 
+Déplacer les fichier unzipe dans "/var/www/vpn_nextcloud/" avec : 
 ```
 sudo mv nextcloud/* ./
 ```
 
 Donnez les bonnes permissions avec :
 ```
-sudo chown -R apache:apache /var/www/tp6_nextcloud/
+sudo chown -R www-data:www-data /var/www/vpn_nextcloud/
+
 ```
 
 🌞 Adapter la configuration d'Apache
 
 Modifier le fichier nextcloud.conf avec cette commande et mettez y le doc ci-dessous :
 ```
-sudo nano /etc/httpd/conf.d/nextcloud.conf
+sudo nano /etc/apache2/sites-available/nextcloud.conf
+
 ```
 ```
-<VirtualHost *:80>
+<VirtualHost 57.151.123.79:80>
   # on indique le chemin de notre webroot
-  DocumentRoot /var/www/tp6_nextcloud/
+  DocumentRoot /var/www/vpn_nextcloud/
   # on précise le nom que saisissent les clients pour accéder au service
   ServerName  web.tp6.linux
 
   # on définit des règles d'accès sur notre webroot
-  <Directory /var/www/tp6_nextcloud/> 
+  <Directory /var/www/vpn_nextcloud/> 
     Require all granted
     AllowOverride All
     Options FollowSymLinks MultiViews
@@ -205,7 +211,9 @@ sudo nano /etc/httpd/conf.d/nextcloud.conf
 
 Redémarrer le service Apache pour qu'il prenne en compte le nouveau fichier de conf avec :
 ```
-sudo systemctl restart httpd
+sudo a2ensite nextcloud.conf
+sudo systemctl restart apache2
+
 ```
 
 
@@ -220,8 +228,9 @@ Avec un navigateur, visitez NextCloud à l'URL http://web.tp6.linux
 
 Installez les modules PHP : 
 ```
-sudo dnf install php-zip php-gd php-pdo php-mysqlnd
-sudo systemctl restart httpd
+sudo apt install php-zip php-gd php-mysql
+sudo systemctl restart apache2
+
 ```
 
 
