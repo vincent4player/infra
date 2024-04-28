@@ -1,7 +1,7 @@
 # Table des matières
 
-1. [Objectifs du projet](#objectifs)
-2. [Présentation d'un serveur VPN](#présentation-dun-vpn)
+1. [Objectifs du projet](#objectifs-du-projet)
+2. [Présentation d'un serveur VPN](#présentation-dun-serveur-vpn)
 3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-apache-et-la-database)
 4. [Prérequis d'installation](#prérequis-dinstallation)
 5. [Installation du serveur VPN](#installation-du-serveur-vpn)
@@ -38,6 +38,7 @@ En mettant en place ces objectifs, nous créons un environnement sécurisé où 
 <br>
 
 # Présentation d'un serveur VPN
+
 # Qu'est-ce qu'un serveur VPN ?
 
 Un serveur VPN (Virtual Private Network) est essentiellement un serveur dédié qui permet de créer un tunnel sécurisé et chiffré entre votre appareil et internet. Ce tunnel sécurisé assure que toutes les données échangées entre votre appareil et le serveur VPN sont cryptées, ce qui offre une protection de votre vie privée et de vos informations sensibles.
