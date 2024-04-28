@@ -11,9 +11,27 @@
 
 
 
+# Projet Infra et Réseau
+<br>
+<br>
+<br>
+<br>
+# Répartition du travail au cours des séances
 
+| Date      | Description de la tâche                                                        |
+|-----------|----------------------------------------------------------------------------------|
+| 11/03/24  | Recherche sur le choix du projet                                                |
+| 12/03/24  | Travail sur l'utilisation d'une VM Azure et configuration du serveur VPN          |
+| 18/03/24  | Configuration du serveur VPN et installation d'Apache                             |
+| 19/03/24  | Configuration du serveur VPN et configuration de Nextcloud                        |
+| 25/03/24  | Configuration du serveur VPN et configuration de Nextcloud                        |
+| 02/04/24  | Configuration du serveur VPN et modification du fichier de configuration de Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN |
+| 22/04/24  | Configuration du serveur VPN et modification du fichier de configuration de Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN |
 
-
+<br>
+<br>
+<br>
+<br>
 
 # Table des matières
 
