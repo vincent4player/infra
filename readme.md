@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Table des matières
 
 1. [Objectifs du projet](#objectifs-du-projet)
@@ -10,6 +27,7 @@
 8. [Configuration de NextCloud](#configuration-de-nextcloud)
 9. [Mise en relation VPN et NextCloud](#mise-en-relation-vpn-et-nextcloud)
 10. [Difficultés rencontrées](#difficultés-rencontrées)
+11. [Participants au projet](#Participants-au-projet)
 <br>
 <br>
 <br>
@@ -419,3 +437,17 @@ Pendant la mise en œuvre du projet, plusieurs difficultés ont été rencontré
    - L'une des difficultés principales a été de configurer Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN. Cette tâche a nécessité des ajustements dans la configuration de Nextcloud ainsi que dans la gestion des règles de pare-feu et des politiques d'accès sur le serveur Azure.
 
 En surmontant ces difficultés, l'équipe a pu réussir à déployer un environnement fonctionnel sur Azure, offrant un accès sécurisé à Nextcloud uniquement aux utilisateurs connectés au VPN, tout en assurant la stabilité et la sécurité de la plateforme.
+
+<br>
+<br>
+<br>
+<br>
+
+# Participants au projet
+
+
+| Nom              | Email                      | Formation                       |
+|------------------|----------------------------|---------------------------------|
+| Vincent Badusch  | vincent.badusch@ynov.com  | B1 informatique à Ynov Campus  |
+| Tom Mallor       | tom.mallor@ynov.com       | B1 informatique à Ynov Campus  |
+| Elio Nguingnang  | elio.nguingnang@ynov.com  | B1 informatique à Ynov Campus  |
