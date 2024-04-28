@@ -52,6 +52,7 @@ Les entreprises utilisent souvent des VPN pour permettre à leurs employés d'ac
 Lorsque vous vous connectez à un VPN, votre adresse IP réelle est masquée et remplacée par l'adresse IP du serveur VPN. Cela peut aider à protéger votre vie privée en ligne en rendant plus difficile pour les sites web et les services en ligne de tracer vos activités. Par exemple, si vous utilisez un VPN avec un serveur situé en France, les sites que vous visitez penseront que vous êtes en France, même si vous êtes physiquement ailleurs.
 
 En résumé, un serveur VPN offre un moyen sécurisé et privé de se connecter à internet et permet à des clients distants d'accéder au même réseau LAN.
+
 <br>
 <br>
 <br>
