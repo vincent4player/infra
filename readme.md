@@ -77,38 +77,7 @@ NextCloud est une application web codée en PHP, qui nécessite une base de donn
 ### Mise en place de NextCloud:
   - NextCloud est une application PHP
 
-## 2. Présentation des étapes
 
-Dans l'ordre, voici les étapes que nous allons suivre :
-
-### Sur le serveur azure :
-1. Installer le serveur web
-  - Installer le service
-  - Lancer le service
-  - Explorer le service pour comprendre sa configuration, son port, etc.
-   
-2. Installer PHP
-  - Une version spécifique est nécessaire
-   
-3. Installer NextCloud
-  - Récupérer une archive sur internet contenant le code
-  - Extraire au bon endroit, gérer les permissions
-   
-4. Configurer le serveur Web
-  - Indiquer la mise en place d'un site Web (NextCloud) dans un dossier spécifique
-  - Redémarrer le service
-
-### Sur le serveur azure :
-1. Installer le service de base de données (MariaDB)
-  - Installer le service
-  - Lancer le service
-  - Explorer le service
-
-2. Préparer le service de base de données pour NextCloud
-  - Se connecter au service en local
-  - Créer un utilisateur et une base de données dédiés à NextCloud
-
-3. Accéder à l'interface de NextCloud depuis votre navigateur
 <br>
 <br>
 <br>
