@@ -36,6 +36,7 @@ En mettant en place ces objectifs, nous créons un environnement sécurisé où 
 <br>
 <br>
 <br>
+
 # Présentation d'un VPN
 # Qu'est-ce qu'un serveur VPN ?
 
@@ -57,6 +58,7 @@ En résumé, un serveur VPN offre un moyen sécurisé et privé de se connecter 
 <br>
 <br>
 <br>
+
 # Présentation de NextCloud, Apache et la database
 # 1. Présentation du setup
 
@@ -83,6 +85,7 @@ NextCloud est une application web codée en PHP, qui nécessite une base de donn
 <br>
 <br>
 <br>
+
 # Installation d'Apache
 Partie 1 : Installation d'Apache sur le serveur azure.
 
@@ -137,6 +140,7 @@ sudo ufw allow 'Apache'
 <br>
 <br>
 <br>
+
 # Installation de la database (mariadb)
 PARTIE 2: Installation de la database pour nextcloud.
 
@@ -178,6 +182,7 @@ sudo ufw allow 3306/tcp
 <br>
 <br>
 <br>
+
 # Configuration de NextCloud
 
 Partie 3 : Configuration et mise en place de NextCloud
@@ -340,6 +345,7 @@ Saisissez l'identifiant et le mot de passe admin que vous voulez, et validez l'i
 <br>
 <br>
 <br>
+
 # Mise en lien VPN et NextCloud
 # Difficultés rencontrées
 
