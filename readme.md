@@ -195,6 +195,7 @@ sudo ufw allow 'Apache'
 ```
 
 En allant sur internet après l’installation d’apache on doit tombé sur la page par défault. C’est ensuite en configurant nextcloud que nous pourrons y avoir accès.
+<br>
 ![alt text](image-3.png)
 <br>
 <br>
