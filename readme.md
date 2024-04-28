@@ -15,6 +15,25 @@
 <br>
 <br>
 <br>
+# Qu'est-ce qu'un serveur VPN ?
+
+Un serveur VPN (Virtual Private Network) est essentiellement un serveur dédié qui permet de créer un tunnel sécurisé et chiffré entre votre appareil et internet. Ce tunnel sécurisé assure que toutes les données échangées entre votre appareil et le serveur VPN sont cryptées, ce qui offre une protection de votre vie privée et de vos informations sensibles.
+
+## Utilisations courantes :
+
+### Accès sécurisé aux réseaux d'entreprise à distance :
+
+Les entreprises utilisent souvent des VPN pour permettre à leurs employés d'accéder en toute sécurité aux ressources internes du réseau, même à distance. Lorsqu'un employé se connecte au serveur VPN de l'entreprise depuis chez lui, il peut accéder aux fichiers, aux serveurs, aux imprimantes, etc., comme s'il était physiquement au bureau. Cette méthode garantit que les données sont protégées pendant la transmission sur internet.
+
+### Pseudo-anonymisation de l'identité en ligne :
+
+Lorsque vous vous connectez à un VPN, votre adresse IP réelle est masquée et remplacée par l'adresse IP du serveur VPN. Cela peut aider à protéger votre vie privée en ligne en rendant plus difficile pour les sites web et les services en ligne de tracer vos activités. Par exemple, si vous utilisez un VPN avec un serveur situé en France, les sites que vous visitez penseront que vous êtes en France, même si vous êtes physiquement ailleurs.
+
+En résumé, un serveur VPN offre un moyen sécurisé et privé de se connecter à internet et permet à des clients distants d'accéder au même réseau LAN.
+<br>
+<br>
+<br>
+<br>
 # 1. Présentation du setup
 
 NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
