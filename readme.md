@@ -1,13 +1,12 @@
-
 # Table des matières
 
 1. [Objectifs](#objectifs)
 2. [Présentation d'un VPN](#présentation-dun-vpn)
-3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-et-apache)
+3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-apache-et-la-database)
 4. [Prérequis d'installation](#prérequis-dinstallation)
 5. [Installation du serveur VPN](#installation-du-serveur-vpn)
 6. [Installation d'Apache](#installation-dapache)
-7. [Installation de la database (mariadb)](#installation-database)
+7. [Installation de la database (mariadb)](#installation-de-la-database-mariadb)
 8. [Configuration de NextCloud](#configuration-de-nextcloud)
 9. [Mise en lien VPN et NextCloud](#mise-en-lien-vpn-et-nextcloud)
 10. [Difficultés rencontrées](#difficultés-rencontrées)
@@ -15,6 +14,7 @@
 <br>
 <br>
 <br>
+
 # Objectifs
 
 Le principal objectif de ce projet est de déployer un environnement sécurisé sur Microsoft Azure, comprenant un serveur VPN, un serveur Apache et une instance Nextcloud. Les objectifs spécifiques sont les suivants :
@@ -31,6 +31,7 @@ Le principal objectif de ce projet est de déployer un environnement sécurisé 
    - Assurer que la page web Nextcloud ne soit pas accessible depuis l'extérieur du réseau VPN.
 
 En mettant en place ces objectifs, nous créons un environnement sécurisé où seuls les utilisateurs authentifiés via le VPN auront accès aux données et aux services fournis par le serveur Nextcloud. Cela garantit la confidentialité et la sécurité des informations stockées et échangées via la plateforme Nextcloud.
+
 <br>
 <br>
 <br>
