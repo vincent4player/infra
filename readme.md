@@ -21,6 +21,7 @@
 10. [Difficultés rencontrées](#difficultés-rencontrées)
 11. [Répartition du travail au cours des séances](#Répartition-du-travail-au-cours-des-séances)
 11. [Participants au projet](#Participants-au-projet)
+
 <br>
 <br>
 <br>
@@ -130,6 +131,122 @@ En respectant ces prérequis et en suivant les étapes d'installation et de conf
 <br>
 
 # Installation du serveur VPN
+
+# Configuration
+
+Chargez le module WireGuard :
+```
+sudo modprobe wireguard
+```
+
+Ajoutez le module WireGuard au chargement automatique au démarrage :
+```
+echo wireguard | sudo tee -a /etc/modules
+```
+Modifier le fichier suivant
+```
+sudo vim /etc/sysctl.conf
+```
+```
+net.ipv4.ip_forward = 1
+net.ipv6.conf.all.forwarding = 1
+```
+
+Appliquer les changements:
+```
+$ sudo sysctl -p
+```
+
+On installe les outils liés à Wireguard
+```
+sudo apt-get install wireguard-tools -y
+```
+
+On génère une clef privée, et on la stocke dans un fichier dédié, dans le dossier /etc/wireguard
+```
+sudo wg genkey | sudo tee /etc/wireguard/server.key
+```
+
+
+On définit des permissions restrictives sur la clef
+```
+sudo chmod 0400 /etc/wireguard/server.key
+```
+
+On génère la clef publique
+```
+sudo wg pubkey < /etc/wireguard/server.key | sudo tee /etc/wireguard/server.pub
+```
+
+Ouvrez ou créez le fichier de configuration wg0.conf dans le répertoire /etc/wireguard/ :
+```
+sudo vim /etc/wireguard/wg0.conf
+```
+
+```
+[Interface]
+Address = 10.107.1.0/24
+SaveConfig = false
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+ListenPort = 13337
+PrivateKey = <clef du server>
+[Peer]
+PublicKey = clef du client1
+AllowedIPs = 10.107.1.11/32
+
+[Peer]
+PublicKey = clef du client2
+AllowedIPs = 10.107.1.12/32
+[19:36]
+```
+
+Pour ajouter un client, le client peut générer une clef via wireguard sur son appareil, changer les ips pour qu'elles correspondent au vpn et au client. Puis il active le tunnel et il sera possible de communiquer entre les 2 appareil.
+
+Démarrer le serveur VPN
+```
+sudo systemctl start wg-quick@wg0.service
+```
+
+Une nouvelle interface réseau aparer
+
+ip a
+
+7: wg0: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1420 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/none
+    inet 10.6.1.1/24 scope global wg0
+       valid_lft forever preferred_lft forever
+
+
+Pour voir les connexions des clients
+```
+wg show
+```
+
+```
+interface: wg0
+  public key: joiSBi5PFHSVwUaf6NCHMSgJpKh5MdjwM2QaGMVKVC0=
+  private key: (hidden)
+  listening port: 13337
+
+peer: IbFjm0RvXD3H6XECCYcKuX6XP4mR2sSnZlAmYStI/C8=
+  endpoint: 31.36.108.193:51252
+  allowed ips: 10.6.1.16/32
+  latest handshake: 36 minutes, 24 seconds ago
+  transfer: 356.87 KiB received, 421.38 KiB sent
+
+peer: iAWWUjipAdzz3H5b9+iQ93KCW8xQkgUZnrvklMBw+Ck=
+  endpoint: 88.120.162.143:17460
+  allowed ips: 10.6.1.15/32
+  latest handshake: 8 hours, 1 minute, 17 seconds ago
+  transfer: 133.43 KiB received, 133.41 KiB sent
+
+peer: 0HK9OId7VYK4i3zsjhxFwijZ3bqkPlhq8gKhtBuI3Cc=
+  endpoint: 185.128.67.50:49201
+  allowed ips: 10.6.1.14/32
+  latest handshake: 1 day, 7 hours, 55 minutes, 9 seconds ago
+  transfer: 10.92 KiB received, 4.44 KiB sent
+```
 
 <br>
 <br>
