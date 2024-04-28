@@ -12,15 +12,14 @@
 9. [Mise en lien VPN et NextCloud](#mise-en-lien-vpn-et-nextcloud)
 10. [Difficultés rencontrées](#difficultés-rencontrées)
 
-
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 # Présentation des composants de NextCloud
 
 ## 1. Présentation du setup
