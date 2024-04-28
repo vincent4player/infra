@@ -73,12 +73,14 @@ MariaDB est un système de gestion de base de données relationnelle (SGBDR) ope
 
 Nextcloud est une plateforme de partage et de stockage de fichiers open-source, auto-hébergée et basée sur le cloud. Il offre une suite complète d'outils de collaboration, notamment le stockage de fichiers, la synchronisation, le calendrier, les contacts, la messagerie, etc. Nextcloud permet aux utilisateurs de stocker leurs données sur un serveur privé ou sur des services cloud tiers tout en conservant le contrôle total sur leurs données. Il est hautement personnalisable et extensible grâce à un écosystème de modules complémentaires et de fonctionnalités supplémentaires. Nextcloud est souvent déployé dans des environnements professionnels, éducatifs et personnels pour offrir un stockage de fichiers sécurisé et un environnement de travail collaboratif.
 
+<br>
+<br>
+<br>
+<br>
 
+# Prérequis d'installation
 
-<br>
-<br>
-<br>
-<br>
+# Installation du serveur VPN
 
 # Installation d'Apache
 
