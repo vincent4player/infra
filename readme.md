@@ -11,17 +11,10 @@
 8. [Configuration de NextCloud](#configuration-de-nextcloud)
 9. [Mise en lien VPN et NextCloud](#mise-en-lien-vpn-et-nextcloud)
 10. [Difficultés rencontrées](#difficultés-rencontrées)
-
 <br>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-# Présentation des composants de NextCloud
-
 ## 1. Présentation du setup
 
 NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
