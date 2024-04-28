@@ -12,21 +12,6 @@
 
 
 # Projet Infra et Réseau
-<br>
-<br>
-<br>
-<br>
-# Répartition du travail au cours des séances
-
-| Date      | Description de la tâche                                                        |
-|-----------|----------------------------------------------------------------------------------|
-| 11/03/24  | Recherche sur le choix du projet                                                |
-| 12/03/24  | Travail sur l'utilisation d'une VM Azure et configuration du serveur VPN          |
-| 18/03/24  | Configuration du serveur VPN et installation d'Apache                             |
-| 19/03/24  | Configuration du serveur VPN et configuration de Nextcloud                        |
-| 25/03/24  | Configuration du serveur VPN et configuration de Nextcloud                        |
-| 02/04/24  | Configuration du serveur VPN et modification du fichier de configuration de Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN |
-| 22/04/24  | Configuration du serveur VPN et modification du fichier de configuration de Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN |
 
 <br>
 <br>
@@ -45,6 +30,7 @@
 8. [Configuration de NextCloud](#configuration-de-nextcloud)
 9. [Mise en relation VPN et NextCloud](#mise-en-relation-vpn-et-nextcloud)
 10. [Difficultés rencontrées](#difficultés-rencontrées)
+11. [Répartition du travail au cours des séances](#Répartition-du-travail-au-cours-des-séances)
 11. [Participants au projet](#Participants-au-projet)
 <br>
 <br>
@@ -461,6 +447,23 @@ Pendant la mise en œuvre du projet, plusieurs difficultés ont été rencontré
    - L'une des difficultés principales a été de configurer Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN. Cette tâche a nécessité des ajustements dans la configuration de Nextcloud ainsi que dans la gestion des règles de pare-feu et des politiques d'accès sur le serveur Azure.
 
 En surmontant ces difficultés, l'équipe a pu réussir à déployer un environnement fonctionnel sur Azure, offrant un accès sécurisé à Nextcloud uniquement aux utilisateurs connectés au VPN, tout en assurant la stabilité et la sécurité de la plateforme.
+
+<br>
+<br>
+<br>
+<br>
+
+# Répartition du travail au cours des séances
+
+| Date      | Description de la tâche                                                        |
+|-----------|----------------------------------------------------------------------------------|
+| 11/03/24  | Recherche sur le choix du projet                                                |
+| 12/03/24  | Travail sur l'utilisation d'une VM Azure et configuration du serveur VPN          |
+| 18/03/24  | Configuration du serveur VPN et installation d'Apache                             |
+| 19/03/24  | Configuration du serveur VPN et configuration de Nextcloud                        |
+| 25/03/24  | Configuration du serveur VPN et configuration de Nextcloud                        |
+| 02/04/24  | Configuration du serveur VPN et modification du fichier de configuration de Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN |
+| 22/04/24  | Configuration du serveur VPN et modification du fichier de configuration de Nextcloud pour n'autoriser l'accès qu'aux utilisateurs connectés au VPN |
 
 <br>
 <br>
