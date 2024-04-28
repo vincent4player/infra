@@ -15,7 +15,7 @@
 <br>
 <br>
 <br>
-# 1. Présentation du setup
+#objectifs
 
 NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
 
