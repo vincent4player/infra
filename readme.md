@@ -15,25 +15,25 @@
 <br>
 <br>
 <br>
-#objectifs
+# 1. Présentation du setup
 
 NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
 
 ### Sur le serveur azure :
-- Installation d'un serveur Web : Apache
+  - Installation d'un serveur Web : Apache
   - Le serveur web traite les requêtes HTTP reçues des clients
   - Il fait passer le contenu des requêtes à NextCloud
   - NextCloud décide quels fichiers HTML, CSS et JS il faut donner au client
   - Le serveur Web effectue une réponse HTTP qui contient ces fichiers HTML, CSS et JS
-- Installation de PHP pour que NextCloud puisse s'exécuter
+  - Installation de PHP pour que NextCloud puisse s'exécuter
 
 ### Sur le serveur azure:
-- Installation d'un service de base de données SQL : MariaDB
+  - Installation d'un service de base de données SQL : MariaDB
   - NextCloud pourra s'y connecter
   - Nous aurons créé une base de données exprès pour lui
 
 ### Mise en place de NextCloud:
-- NextCloud est une application PHP
+  - NextCloud est une application PHP
 
 ## 2. Présentation des étapes
 
