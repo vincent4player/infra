@@ -17,7 +17,6 @@
 <br>
 # Objectifs
 
-
 Le principal objectif de ce projet est de déployer un environnement sécurisé sur Microsoft Azure, comprenant un serveur VPN, un serveur Apache et une instance Nextcloud. Les objectifs spécifiques sont les suivants :
 
 1. **Création d'un serveur VPN sur Azure :**
