@@ -20,7 +20,7 @@
 
 
 
-3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-et-apache)
+#présentation-de-nextcloud-et-apache
 # Présentation des composants de NextCloud
 
 ## 1. Présentation du setup
