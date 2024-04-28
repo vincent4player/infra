@@ -15,7 +15,7 @@
 <br>
 <br>
 <br>
-## 1. Présentation du setup
+# 1. Présentation du setup
 
 NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
 
@@ -67,14 +67,10 @@ Dans l'ordre, voici les étapes que nous allons suivre :
    - Créer un utilisateur et une base de données dédiés à NextCloud
 
 3. Accéder à l'interface de NextCloud depuis votre navigateur
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
 Partie 1 : Installation d'Apache sur le serveur azure.
 
 
@@ -124,8 +120,10 @@ Ouvrir les ports si necessaire avec :
 sudo ufw allow 'Apache'
 
 ```
-
-
+<br>
+<br>
+<br>
+<br>
 PARTIE 2: Installation de la database pour nextcloud.
 
 
@@ -162,8 +160,10 @@ Ouvrir les ports si necessaire.
 sudo ufw allow 3306/tcp
 
 ```
-
-
+<br>
+<br>
+<br>
+<br>
 Partie 3 : Configuration et mise en place de NextCloud
 
 
