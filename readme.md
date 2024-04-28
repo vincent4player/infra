@@ -1,18 +1,8 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
 # Projet Infra et Réseau
-
+![alt text](image-6.png)
+![alt text](image-7.png)
 <br>
 <br>
 <br>
