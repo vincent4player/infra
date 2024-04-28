@@ -87,24 +87,24 @@ NextCloud est une application web codée en PHP, qui nécessite une base de donn
 <br>
 
 # Installation d'Apache
-Partie 1 : Installation d'Apache sur le serveur azure.
 
 
-🌞 Installer le serveur Apache
+
+Installer le serveur Apache.
 
 ```
 sudo apt update
 sudo apt install apache2
 ```
 
-le fichier de conf principal est /etc/apache2/apache2.conf
+Le fichier de configuration principal est /etc/apache2/apache2.conf.
 ```
 sudo nano /etc/apache2/apache2.conf
 ```
 
-🌞 Démarrer le service Apache
+Démarrer le service Apache.
 
-le service s'appelle apache2.
+Le service s'appelle apache2.
 
 Démarrez-le avec:
 ```
@@ -124,7 +124,7 @@ sudo systemctl status apache2
 
 ```
 
-Vérifier qu'il se lance bien au demarage avec : 
+Vérifier qu'il se lance bien au démarage avec : 
 ```
 sudo systemctl is-enabled apache2
 
@@ -142,10 +142,7 @@ sudo ufw allow 'Apache'
 <br>
 
 # Installation de la database (mariadb)
-PARTIE 2: Installation de la database pour nextcloud.
 
-
-🌞 Install de MariaDB .
 
 Installer MariaDB
 ```
@@ -185,12 +182,8 @@ sudo ufw allow 3306/tcp
 
 # Configuration de NextCloud
 
-Partie 3 : Configuration et mise en place de NextCloud
 
-
-🌞 Préparation de la base pour NextCloud
-
-
+Préparation de la base pour NextCloud
 
 Sur la machine DataBase connectez-vous à la base de données avec :
 ``` 
@@ -219,7 +212,7 @@ FLUSH PRIVILEGES;
 ```
 
 
-🌞 Exploration de la base de données
+Exploration de la base de données
 
 Utilisez la commande mysql pour vous connecter à une base de données, ici ce sera :
 ```
@@ -245,13 +238,13 @@ sudo apt install php libapache2-mod-php php-mysql
 
 ```
 
-🌞 Récupérer NextCloud
+Récupérer NextCloud
 
 créez le dossier /var/www/vpn_nextcloud/
 Ce sera notre racine web l'endroit où le site est stocké.
 
 
-récupérer le fichier suivant avec une commande wget :
+Récupérer le fichier suivant avec une commande wget :
 ```
 sudo wget https://download.nextcloud.com/server/releases/latest.zip -P /var/www/vpn_nextcloud/
 
@@ -314,8 +307,8 @@ sudo systemctl restart apache2
 3. Finaliser l'installation de NextCloud
 ➜ Sur votre PC
 
-Modifiez votre fichier hosts de votre PC pour pouvoir joindre l'IP de la VM en utilisant le nom web.tp6.linux
-Avec un navigateur, visitez NextCloud à l'URL http://web.tp6.linux
+Modifiez votre fichier hosts de votre PC pour pouvoir joindre l'IP de la VM en utilisant le nom vpn_nextcloud
+Avec un navigateur, visitez NextCloud à l'URL http://vpn_nextcloud
 
 
 🌞 Installez les deux modules PHP.
