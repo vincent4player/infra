@@ -1,6 +1,6 @@
 # Table des matières
 
-1. [Objectifs](#objectifs)
+1. [Objectifs du projet](#objectifs)
 2. [Présentation d'un serveur VPN](#présentation-dun-vpn)
 3. [Présentation de NextCloud, Apache et la database](#présentation-de-nextcloud-apache-et-la-database)
 4. [Prérequis d'installation](#prérequis-dinstallation)
@@ -15,7 +15,7 @@
 <br>
 <br>
 
-# Objectifs
+# Objectifs du projet
 
 Le principal objectif de ce projet est de déployer un environnement sécurisé sur Microsoft Azure, comprenant un serveur VPN, un serveur Apache et une instance Nextcloud. Les objectifs spécifiques sont les suivants :
 
