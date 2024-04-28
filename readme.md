@@ -60,25 +60,18 @@ En résumé, un serveur VPN offre un moyen sécurisé et privé de se connecter 
 <br>
 
 # Présentation de NextCloud, Apache et la database
-# 1. Présentation du setup
+## Apache
 
-NextCloud est une application web codée en PHP, qui nécessite une base de données SQL pour fonctionner. Voici le setup que nous allons suivre :
+Apache est un serveur web open-source largement utilisé dans le monde entier. Il est réputé pour sa fiabilité, sa robustesse et sa flexibilité. Apache est capable de servir des pages web statiques et dynamiques sur internet. Il fonctionne sur de nombreux systèmes d'exploitation, notamment Linux, Windows, macOS, etc. Son architecture modulaire permet d'ajouter des fonctionnalités supplémentaires via des modules. Il est souvent utilisé en conjonction avec des langages de script côté serveur tels que PHP, Python ou Perl pour créer des sites web dynamiques.
 
-### Sur le serveur azure(Apache) :
-  - Installation d'un serveur Web : Apache
-  - Le serveur web traite les requêtes HTTP reçues des clients
-  - Il fait passer le contenu des requêtes à NextCloud
-  - NextCloud décide quels fichiers HTML, CSS et JS il faut donner au client
-  - Le serveur Web effectue une réponse HTTP qui contient ces fichiers HTML, CSS et JS
-  - Installation de PHP pour que NextCloud puisse s'exécuter
+## MariaDB
 
-### Sur le serveur azure(Database):
-  - Installation d'un service de base de données SQL : MariaDB
-  - NextCloud pourra s'y connecter
-  - Nous aurons créé une base de données exprès pour lui
+MariaDB est un système de gestion de base de données relationnelle (SGBDR) open-source, créé par les développeurs originaux de MySQL. Il est conçu pour être une alternative compatible avec MySQL, offrant des performances, une stabilité et une évolutivité élevées. MariaDB est largement utilisé dans les environnements de production pour stocker et gérer des données de manière sécurisée. Il est compatible avec de nombreuses applications et frameworks web, offrant une intégration transparente avec des langages de programmation comme PHP, Python, Java, etc.
 
-### Mise en place de NextCloud:
-  - NextCloud est une application PHP
+## Nextcloud
+
+Nextcloud est une plateforme de partage et de stockage de fichiers open-source, auto-hébergée et basée sur le cloud. Il offre une suite complète d'outils de collaboration, notamment le stockage de fichiers, la synchronisation, le calendrier, les contacts, la messagerie, etc. Nextcloud permet aux utilisateurs de stocker leurs données sur un serveur privé ou sur des services cloud tiers tout en conservant le contrôle total sur leurs données. Il est hautement personnalisable et extensible grâce à un écosystème de modules complémentaires et de fonctionnalités supplémentaires. Nextcloud est souvent déployé dans des environnements professionnels, éducatifs et personnels pour offrir un stockage de fichiers sécurisé et un environnement de travail collaboratif.
+
 
 
 <br>
